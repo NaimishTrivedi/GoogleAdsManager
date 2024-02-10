@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Created by Naimish Trivedi on 02/02/24, 1:52 pm
+  ~ Copyright (c) 2024 . All rights reserved.
+  ~ Last modified 02/02/24, 1:52 pm
+  -->
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="naimishtrivedi.adsmanager.googleadsmanager.BannerAdsDemo">
+    <naimishtrivedi.in.googleadsmanager.BannerAds
+        android:id="@+id/mBannerAds"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_animation="@layout/ad_banner_shimmer_effect"
+       app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <naimishtrivedi.in.googleadsmanager.BannerAds
+        android:id="@+id/mLargeBannerAds"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:adsBannerSize="largeSize"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <naimishtrivedi.in.googleadsmanager.BannerAds
+        android:id="@+id/mBannerAdsWithoutAnimation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:showAnimation="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

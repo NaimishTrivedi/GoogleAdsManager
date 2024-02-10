@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Created by Naimish Trivedi on 09/02/24, 6:58 pm
+  ~ Copyright (c) 2024 . All rights reserved.
+  ~ Last modified 09/02/24, 6:58 pm
+  -->
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AppOpenAdsDemo">
+
+    <Button
+        android:id="@+id/mBtnLoadAds"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Load App Open Ads"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <Button
+        android:id="@+id/mBtnShowAds"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Show App Open Ads"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mBtnLoadAds"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Created by Naimish Trivedi on 01/02/24, 3:40 pm
+  ~ Copyright (c) 2024 . All rights reserved.
+  ~ Last modified 01/02/24, 3:40 pm
+  -->
+
+<resources>
+    <declare-styleable name="googleadsmanager">
+        <!-- layout_animation attribute help to
+       set animation view till ads not load.
+       Give reference layout for animation -->
+        <attr name="layout_animation" format="reference"/>
+        <!-- showAnimation attribute help to
+        ad load animation visible or not.
+        Give true/false for achieve it.-->
+        <attr name="showAnimation" format="boolean"/>
+    </declare-styleable>
+
+    <declare-styleable name="BannerAds">
+        <!-- adsBannerSize attribute help to
+        given size for banner height.-->
+        <attr name="adsBannerSize" format="enum">
+            <!-- Default size take a max 50 px height-->
+            <enum name="defaultSize" value="0"/>
+            <!-- Large size take a max 100 px height-->
+            <enum name="largeSize" value="1"/>
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="NativeBannerAds">
+        <!-- adsLayoutId attribute help to set native ads layout.
+         Give reference layout for load native ads container.  -->
+        <attr name="adsLayoutId" format="reference"/>
+    </declare-styleable>
+</resources>
