@@ -1,6 +1,18 @@
 # GoogleAdsManager
 Explore to our Google Ad Library on GitHub – your go-to resource for seamless integration and effortless development. Dive in, explore, and leverage the power of our user-friendly tools to enhance your projects with ease.
 
+# Demo
+
+## Ad view Layout
+|        Banner Ads Layouts     |        Native Ads Layouts     |      
+| ---------------------------- | ----------------------------- | 
+| <img src='demo/bannerads.gif' height=480 width=240 /> | <img src='demo/nativeads.gif' height=480 width=240 /> |
+
+## Fullscreen Ad Layout
+|        Interstitial Ads     |        Rewarded Ads     | AppOpen Ads |     
+| ---------------------------- | ----------------------------- | ---------- |
+| <img src='demo/intertitialsads.gif' height=480 width=240 /> | <img src='demo/rewardads.gif' height=480 width=240 /> | <img src='demo/appopenads.gif' height=480 width=240 /> |
+
 # Download
 To include library in your project, add the following to your dependencies:
 
