@@ -1,11 +1,19 @@
-/*
- * Created by Naimish Trivedi on 01/02/24, 3:24 pm
- * Copyright (c) 2024 . All rights reserved.
- * Last modified 01/02/24, 3:24 pm
- */
+buildscript {
+    val kotlin_version = "1.7.20"
+    repositories {
+        google()
+        mavenCentral()
+        mavenLocal()
+    }
 
+    dependencies {
+        classpath("com.android.tools.build:gradle:7.1.3")
+        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version")
+    }
+}
 plugins {
     id("com.android.library")
+    id("maven-publish")
 }
 
 android {
@@ -26,6 +34,12 @@ android {
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
+            consumerProguardFiles(
+                getDefaultProguardFile("proguard-android-optimize.txt"),
+                "proguard-rules.pro")
+            consumerProguardFiles(
+                getDefaultProguardFile("proguard-android-optimize.txt"),
+                "consumer-rules.pro")
         }
     }
     compileOptions {
@@ -34,6 +48,16 @@ android {
     }
 }
 
+java{
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(17)
+    }
+}
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_17
+    targetCompatibility = JavaVersion.VERSION_17
+}
 
 dependencies {
 
@@ -47,4 +71,20 @@ dependencies {
     implementation("com.google.firebase:firebase-analytics:21.5.1")
     implementation ("com.google.android.gms:play-services-ads:22.6.0")
     implementation ("com.facebook.shimmer:shimmer:0.5.0@aar")
+}
+
+publishing{
+    publications {
+       register<MavenPublication>("release"){
+           groupId = "com.github.NaimishTrivedi"
+           artifactId = "GoogleAdsManager"
+           version = "1.0.1"
+           pom {
+               description = "Ads Manager"
+           }
+       }
+    }
+    repositories {
+        mavenLocal()
+    }
 }
